@@ -21,3 +21,8 @@
     * S'étendre à d'autres types de médias : textes, PDF, audio, modèles 3D, etc.
     * Intégrer des fonctionnalités de cryptographie : pouvoir signer des vidéos pour en prouver sa paternité, chiffrer des vidéos pour les partager uniquement avec ceux qui y sont autorisés (projet ISN de Colin)
     * Annuaire de flux
+
+#Présentation
+* Présenter le "méchant" : pourquoi LibreCast est utile
+* Dire en une phrase ce que LibreCast fait, avant d'entrer dans les détails
+* Parler des quelques détails importants, avec des photos

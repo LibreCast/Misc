@@ -22,7 +22,7 @@
     * Intégrer des fonctionnalités de cryptographie : pouvoir signer des vidéos pour en prouver sa paternité, chiffrer des vidéos pour les partager uniquement avec ceux qui y sont autorisés (projet ISN de Colin)
     * Annuaire de flux
 
-#Présentation
+###Présentation
 * Présenter le "méchant" : pourquoi LibreCast est utile
 * Dire en une phrase ce que LibreCast fait, avant d'entrer dans les détails
 * Parler des quelques détails importants, avec des photos

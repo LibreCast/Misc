@@ -10,6 +10,7 @@
     * Collaboration avec GitHub
 * Les technologies utilisées
   * Le P2P
+  * Les backend vidéos
 * Le code
     * XML (parser lxml)
     * Téléchargement de vidéos (aria2)

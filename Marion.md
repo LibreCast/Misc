@@ -18,6 +18,7 @@
 * Analyse de l'UI de LibreCast
   * Découpage de la fenêtre
   * Pourquoi cette partie est là + utilité
+  * Rendre l'UI intelligente (regex)
 
 * Penser au delà de LibreCast
   * Financièrement
@@ -30,3 +31,8 @@
   * Plus les problèmes de droits d'auteurs
   * Utilisation de technologies à la mode, en ajoutant des fonctionnalités
   * Projet qui peut encore évoluer
+
+* Annexes
+ * Code d'une fenêtre simplifiée
+ * Photo de la fenêtre avec explication
+ * Même photo mais découpage des widgets et sizers

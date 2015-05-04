@@ -21,10 +21,8 @@
   * Rendre l'UI intelligente (regex)
 
 * Penser au delà de LibreCast
-  * Financièrement
-  * Intégration avec d'autres plate-formes
+  * Financièrement (serveurs + Google ads)
   * D'autres types de médias : textes, PDF, audio, modèles 3D, etc.
-  * Annuaire de flux
 
 * Conclusion
   * LibreCast se veut être une tentative pour penser autrement que les autres plateformes.

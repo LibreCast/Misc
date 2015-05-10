@@ -2,7 +2,7 @@
 
 * Comprendre LibreCast.
 
-* Organisation du travail
+* Organisation du travail + cahier des charges
   * UI + liens entre les modules
   * GitHub
 
@@ -20,7 +20,7 @@
   * Pourquoi cette partie est là + utilité
   * Rendre l'UI intelligente (regex)
 
-* Penser au delà de LibreCast
+* Penser au delà de LibreCast = perspectives
   * Financièrement (serveurs + Google ads)
   * D'autres types de médias : textes, PDF, audio, modèles 3D, etc.
 

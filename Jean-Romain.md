@@ -12,6 +12,7 @@
   * Gestion du backend
   * codec vidéos
   * Lecteur vidéo
+  * Multi-threading
   
 * Analyse de l'UI de LibreCast
   * Réflexion sur l'UI du player

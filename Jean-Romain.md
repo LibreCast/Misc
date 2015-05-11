@@ -13,8 +13,6 @@
   * codec vidéos
   * Lecteur vidéo
   * Multi-threading
-    * 1
-      * 2
 
 * Analyse de l'UI de LibreCast
   * Réflexion sur l'UI du player

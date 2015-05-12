@@ -1,17 +1,20 @@
 * Introduction
 
-* Comprendre LibreCast.
+* Comprendre LibreCast
+Pourquoi la nécessité de LIbreCast ? (ce que ça apporte de plus que les autres plate-formes de partage de vidéos)
+Ses principes (droits d'auteurs et liberté etc...)
+Comment ça marche concrètement ?
 
-* Organisation du travail + cahier des charges
+* Organisation du travail + cahier des charges (ensemble de ce qu'il fallait réaliser // nos compétences)
   * UI + liens entre les modules
-  * GitHub
+  * GitHub = permet une meilleure collaboration, adaptée au partage de code
 
 * WxPython is love, WxPython is life
   * Découpage en widgets
   * Photo de découpages
 
 * Création de l'UI
-  * Réflexion sur l'accessibilité
+  * Réflexion sur l'accessibilité (photos de Jean)
   * Les contraintes d'une UI compréhensible
   => exemple des téléphones avant tactile, puis après
   

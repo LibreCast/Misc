@@ -13,11 +13,27 @@ Ce sont ces deux points que LibreCast cherche à contourner, tout en paliant aux
 L'objectif de LibreCast, c'est de proposer un partage plus simple, garantissant une plus grande liberté d'expression et laissant chacun libre de poser des limites de droits sur son propre contenu.
 
 ## Comment ça marche ?
+...
+
+# Réalisation de l'Interface Utilisateur
+
+## Ergonomie, simplicité et accessibilité
+Une Interface Utilisateur (UI) accessible occasionne des contraintes importantes. En effet, il est important de garantir une interface intuitive et centrée utilisateur. La perception d’une application se fait en fonction de son apparence autant que de sa simplicité d’utilisation. 
+
+(exemple téléphones avant tactile puis après)
+
+Nous avons longuement pensé l'Interface Utilisateur de LibreCast, la voulant à la fois simple et fonctionnelle. Bien plus que la seule esthétique du projet, c'est elle qui relie utilisateur et application. Elle se doit d'être organisée et réfléchie, mais surtout adaptée au projet. La coder nous-même garantit alors une main prise sur sa conception. 
+
+## Réflexions sur l'UI de LibreCast
+Avant tout, il a fallu revenir aux bases : prendre un tableau et un marqueur et essayer, effacer, recommencer, réorganiser les éléments importants pour chaque fenêtre. Nous avons fait cela en gardant à l'esprit l'étendue de nos compétences. 
+
+(photos avec commentaires)
+
+Jean nous a ensuite proposé l'utilisation d'une librairie python pour la programmer : wxpython. Cet outil informatique m'étais alors inconnu et j'ai dû apprendre à m'en servir, avec l'aide de mes camarades. C'est dans ce contexte que j'ai également découvert la programmation orienté objet, alors indispensable.
 
 
 
-
-- [x]  Comprendre LibreCast
+- [ ]  Comprendre LibreCast
 Pourquoi la nécessité de LIbreCast ? (ce que ça apporte de plus que les autres plate-formes de partage de vidéos)
 Ses principes (droits d'auteurs et liberté etc...)
 Comment ça marche concrètement ?
@@ -26,14 +42,14 @@ Comment ça marche concrètement ?
   * UI + liens entre les modules
   * GitHub = permet une meilleure collaboration, adaptée au partage de code
 
-- [ ] WxPython is love, WxPython is life
-  * Découpage en widgets
-  * Photo de découpages
-
 - [ ] Création de l'UI
   * Réflexion sur l'accessibilité (photos de Jean)
   * Les contraintes d'une UI compréhensible
   => exemple des téléphones avant tactile, puis après
+
+- [ ] WxPython is love, WxPython is life
+  * Découpage en widgets
+  * Photo de découpages
   
 - [ ] Analyse de l'UI de LibreCast
   * Découpage de la fenêtre

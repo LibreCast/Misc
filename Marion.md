@@ -38,7 +38,7 @@ Jean nous a ensuite proposé l'utilisation d'une librairie python pour la progra
 # Utilisation de Wxpython
 
 ## Découpage en widgets
-Cette bibliothèque python est utilisée pour la création d'interfaces graphiques. Elle est simple d'utilisation donc facilement appréhendable mais permet des réalisations intéressantes. Avec wxpython, les fenêtres sont découpées en _widgets_, c'est à dire des éléments avec lesquels l'utilisateur peut interagir et qui, assemblés, composent l'interface. Par exemple, une zone de texte (_textBox_) permet de proposer à l'utilisateur de saisir une chaîne de caractères. Celle-ci peut être récupérée à l'aide d'une fonction (_event_) et réutilisée dans un autre widget. C'est le cas lorsque l'on crée une playlist sur LibreCast.
+Cette bibliothèque python est utilisée pour la création d'interfaces graphiques. Elle est simple d'utilisation donc facilement appréhendable mais permet des réalisations intéressantes. Avec wxpython, les fenêtres sont découpées en _widgets_, c'est à dire des éléments avec lesquels l'utilisateur peut interagir et qui, assemblés, composent l'interface. Par exemple, une zone de texte (_textBox_) permet de proposer à l'utilisateur de saisir une chaîne de caractères. Celle-ci peut être récupérée à l'aide d'une fonction wxpython et éventuellement réutilisée dans un autre widget. C'est le cas lorsque l'on crée une playlist sur LibreCast.
 
 
 

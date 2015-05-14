@@ -13,23 +13,32 @@ Ce sont ces deux points que LibreCast cherche à contourner, tout en paliant aux
 L'objectif de LibreCast, c'est de proposer un partage plus simple, garantissant une plus grande liberté d'expression et laissant chacun libre de poser des limites de droits sur son propre contenu.
 
 ## Comment ça marche ?
-...
+_à compléter_
 
 # Réalisation de l'Interface Utilisateur
 
 ## Ergonomie, simplicité et accessibilité
 Une Interface Utilisateur (UI) accessible occasionne des contraintes importantes. En effet, il est important de garantir une interface intuitive et centrée utilisateur. La perception d’une application se fait en fonction de son apparence autant que de sa simplicité d’utilisation. 
 
-(exemple téléphones avant tactile puis après)
+> L 'exemple du tactile illustre bien cette importance :
+> L'informatique connaît une véritable révolution avec la mise au point des interfaces tactiles. Elles simplifient alors notablement le dialogue avec l'utilisateur. 
+> _à compléter_
+
+> On sait également que de nombreux smartphones équipés de fonctions attractives ont été des échecs commerciaux parce que leur interface étaient trop complexes et difficiles à utiliser.
 
 Nous avons longuement pensé l'Interface Utilisateur de LibreCast, la voulant à la fois simple et fonctionnelle. Bien plus que la seule esthétique du projet, c'est elle qui relie utilisateur et application. Elle se doit d'être organisée et réfléchie, mais surtout adaptée au projet. La coder nous-même garantit alors une main prise sur sa conception. 
 
 ## Réflexions sur l'UI de LibreCast
 Avant tout, il a fallu revenir aux bases : prendre un tableau et un marqueur et essayer, effacer, recommencer, réorganiser les éléments importants pour chaque fenêtre. Nous avons fait cela en gardant à l'esprit l'étendue de nos compétences. 
 
-(photos avec commentaires)
+_(photos avec commentaires)_
 
 Jean nous a ensuite proposé l'utilisation d'une librairie python pour la programmer : wxpython. Cet outil informatique m'étais alors inconnu et j'ai dû apprendre à m'en servir, avec l'aide de mes camarades. C'est dans ce contexte que j'ai également découvert la programmation orienté objet, alors indispensable.
+
+# Utilisation de Wxpython
+
+## Découpage en widgets
+Cette bibliothèque python est utilisée pour la création d'interfaces graphiques. Elle est simple d'utilisation donc facilement appréhendable mais permet des réalisations intéressantes. Avec wxpython, les fenêtres sont découpées en _widgets_, c'est à dire des éléments avec lesquels l'utilisateur peut interagir et qui, assemblés, composent l'interface. Par exemple, une zone de texte (_textBox_) permet de proposer à l'utilisateur de saisir une chaîne de caractères. Celle-ci peut être récupérée à l'aide d'une fonction (_event_) et réutilisée dans un autre widget. C'est le cas lorsque l'on crée une playlist sur LibreCast.
 
 
 

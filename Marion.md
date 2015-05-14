@@ -1,10 +1,10 @@
-Communiquer, s'exprimer, partager simplement et librement, c'est ce à quoi nous, en tant qu'internautes, aspiront de plus en plus. Et si de nombreuses plates-formes proposent de répondre à cette demande, elles présentent pourtant souvent des inconvénients notables. C'est dans l'optique de créer un moyen de partage de vidéos qui corresponde à nos attentes que nous avons créé LibreCast.
+Communiquer, s'exprimer, partager simplement et librement, c'est ce à quoi nous, en tant qu'internautes, aspirons de plus en plus. Et si de nombreuses plates-formes proposent de répondre à cette demande, elles présentent pourtant souvent des inconvénients notables. C'est dans l'optique de créer un moyen de partage de vidéos qui corresponde à nos attentes que nous avons créé LibreCast.
 
 # Comprendre LibreCast
 
 ##Pourquoi LibreCast ?
 
-Des géants comme Youtube, Dailymotion ou encore Viméo sont parvenus à s'imposer dans la sphère audiovisuelle d'Internet, concentrant l'accès à des vidéos et/ou musiques. Cependant chacun d'eux aborde le concept de plate-forme de partage de la même manière : les données sont centralisées et c'est la plate-forme qui gère les problèmes de droits d'auteurs. Ainsi, il leur est nécessaire :
+Des géants comme Youtube, Dailymotion ou encore Viméo sont parvenus à s'imposer dans la sphère audiovisuelle d'Internet, concentrant l'accès à des vidéos et/ou musiques. Cependant chacun d'eux aborde le concept de plate-forme de partage de la même manière : les données sont centralisées et c'est la plate-forme elle-même qui gère les problèmes de droits d'auteurs. Ainsi, il leur est nécessaire :
  * de stocker toutes ces données eux même
  * d'officialiser une politique de gestion des droits d'auteurs et donc également un moyen de contrôle
  

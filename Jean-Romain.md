@@ -1,3 +1,28 @@
+
+# Organisation du travail
+## Interface utilisateur
+L’interface utilisateur est une partie extrêmement importante d’un logiciel, dans la mesure où c’est le seul moyen de communication avec l’utilisateur. Il faut permettre à ce dernier d’utiliser toutes les fonctionnalités d’un logiciel, en conservant une interface intuitive.
+> Par exemple, le compteur de vitesse d’une voiture est un bon exemple d’une interface simple, intuitive et qui accomplit parfaitement son rôle.
+
+Dans la création de l’interface, mon rôle a été de mettre en relation l’arbre avec les Abonnements et les listes de lecture de l’utilisateur et la liste de vidéos (voir Annexe 1), ainsi que créer l’interface permettant de visionner des vidéos.
+
+## Modules
+Afin de structurer LibreCast, j’ai découpé notre code en plusieurs fichiers, et ensuite créé des modules. Un module est un ensemble de code, qui peut-être utilisé depuis un autre fichier. Cela permet d’utiliser plusieurs fois les mêmes fonctionnalités, sans dupliquer du code, mais également de structurer le projet et rendre son fonctionnement plus clair.
+Pour LibreCast, j’ai créé 2 modules regroupant du code des mes partenaires et moi-même :
+* Le manageur de requêtes, qui s’occupe de récupérer des informations d’internet
+* Le manageur de l’interface, qui contient le code pour chaque fenêtre, ainsi que les images utilisées.
+
+## Stocker des informations
+Dans la répartition du travail, Jean Thomas s’est occupé de la création d’une base de donnée, qui sauvegarde et organise toutes les informations spécifiques à un utilisateur. Mon rôle a été de lier les différentes parties de l’interface (créées par Marion Ser ou moi-même) avec cette base de donnée, et ainsi permettre d’afficher, par exemple, les listes de lectures ajoutées par l’utilisateur.
+
+## GitHub
+Le travail a donc été découpé en plusieurs parties, chacun avec un rôle spécifique. Néanmoins, tous nos rôles sont étroitement liés, et il nous a donc fallu travailler en collaboration.
+> En effet, imaginons la situation suivante :
+> Marion créée une fenêtre affichant les listes de lectures de l’utilisateur. De mon côté, je souhaite lier la base de donnée créée par Jean avec cette nouvelle interface. Il me faut alors accès aux fichiers de Marion et de Jean en même temps.
+
+Nous avons donc utilisé GitHub, un site internet très répandu permettant à des équipes de stocker leurs fichiers, et à chaque membre de cette équipe de modifier les fichiers à l’aide d’un système de « commits » : chaque fois que quelqu’un fait une modification, il entre un message court expliquant ce qui a été fait. GitHub applique alors ces modifications, sans modifier les fichiers qui n’ont pas été édités dans ce commit.
+
+
 * Introduction
 
 * Comprendre LibreCast.

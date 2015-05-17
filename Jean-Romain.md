@@ -34,3 +34,4 @@
 * Annexes
  * Schéma backend -> wxpython
  * Photo de la fenêtre (avec vidéo qui joue)
+ * Webographie : http://wxpython.org/Phoenix/docs/html/main.html (doc wxpython)

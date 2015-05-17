@@ -22,7 +22,18 @@ Le travail a donc été découpé en plusieurs parties, chacun avec un rôle sp�
 
 Nous avons donc utilisé GitHub, un site internet très répandu permettant à des équipes de stocker leurs fichiers, et à chaque membre de cette équipe de modifier les fichiers à l’aide d’un système de « commits » : chaque fois que quelqu’un fait une modification, il entre un message court expliquant ce qui a été fait. GitHub applique alors ces modifications, sans modifier les fichiers qui n’ont pas été édités dans ce commit.
 
+# Analyse de l'interface de LibreCast
+## Glisser-déposer (aka Drag and Drop)
+Pour permettre à l’utilisateur d’ajouter une vidéo dans une liste de lecture (ses favoris par exemple), le glisser-déposer s’impose comme une solution clair et intuitive. En effet, lorsque vous souhaitez ajouter un fichier dans un dossier, vous pouvez vous contenter d’un glisser-déposer. De là à faire de même avec une vidéo, il n’y a qu’un pas (voir Annexe 2).
 
+## Lecteur de vidéo
+Mais l’interface de LibreCast ne serait pas complète sans un moyen de visionner des vidéos. Encore une fois, nous avons pensé à la solution la plus simple : double-cliquer sur une vidéo permet la regarder en lançant le lecteur.
+Lancer la vidéo a demandé une réflexion technique, évoqué plus tard, mais également sur l’aspect de l’interface. Si un lecteur de vidéo peut sembler banal, il a tout de même fallu penser aux fonctionnalités nécessaires : réglage du son, de la taille de la fenêtre…
+Pour cela, je me suis notamment inspiré de l’apparence de VLC (quant aux fonctionnalités nécessaires), et ai opté pour une interface relativement sombre, souvent préférable lors du visionnage de vidéos (voir Annexe 3).
+On retrouve donc des boutons « play » et « pause », une fonctionnalité « plein écran », le temps écoulé et le temps restant de vidéo, mais également une barre montrant l’avancement de manière graphique, et permettant de se déplacer dans la vidéo. Enfin, une dernière barre (située derrière la précédente) montre l’avancement du téléchargement de la vidéo.
+
+
+# Plan
 * Introduction
 
 * Comprendre LibreCast.

@@ -1,9 +1,9 @@
 # Organisation du travail
 ## Interface utilisateur
 L’interface utilisateur est une partie extrêmement importante d’un logiciel, dans la mesure où c’est le seul moyen de communication avec l’utilisateur. Il faut permettre à ce dernier d’utiliser toutes les fonctionnalités d’un logiciel, en conservant une interface intuitive.
-> Par exemple, le compteur de vitesse d’une voiture est un bon exemple d’une interface simple, intuitive et qui accomplit parfaitement son rôle.
+> Par exemple, le compteur de vitesse d’une voiture est une bonne illustration d’une interface simple, intuitive et qui accomplit parfaitement son rôle.
 
-Dans la création de l’interface, mon rôle a été de mettre en relation l’arbre avec les Abonnements et les listes de lecture de l’utilisateur et la liste de vidéos (voir Annexe 1), ainsi que créer l’interface permettant de visionner des vidéos.
+Dans la création de l’interface, mon rôle a été de mettre en relation l’arbre contenant les Abonnements et les listes de lecture de l’utilisateur avec la liste de vidéos (voir Annexe 1), ainsi que créer l’interface permettant de visionner les vidéos.
 
 ## Modules
 Afin de structurer LibreCast, j’ai découpé notre code en plusieurs fichiers, et ensuite créé des modules. Un module est un ensemble de code, qui peut-être utilisé depuis un autre fichier. Cela permet d’utiliser plusieurs fois les mêmes fonctionnalités, sans dupliquer du code, mais également de structurer le projet et rendre son fonctionnement plus clair.
@@ -19,7 +19,7 @@ Le travail a donc été découpé en plusieurs parties, chacun avec un rôle sp�
 > En effet, imaginons la situation suivante :
 > Marion créée une fenêtre affichant les listes de lectures de l’utilisateur. De mon côté, je souhaite lier la base de donnée créée par Jean avec cette nouvelle interface. Il me faut alors accès aux fichiers de Marion et de Jean en même temps.
 
-Nous avons donc utilisé GitHub, un site internet très répandu permettant à des équipes de stocker leurs fichiers, et à chaque membre de cette équipe de modifier les fichiers à l’aide d’un système de « commits » : chaque fois que quelqu’un fait une modification, il entre un message court expliquant ce qui a été fait. GitHub applique alors ces modifications, sans modifier les fichiers qui n’ont pas été édités dans ce commit.
+Nous avons donc utilisé GitHub, un site internet très répandu permettant à des équipes de stocker leurs fichiers, et à chaque membre de cette équipe de modifier les fichiers à l’aide d’un système de « commits » : chaque fois que quelqu’un fait une modification, il entre un message court expliquant ce qui a été fait. GitHub applique alors ces modifications, sans modifier les fichiers qui n’ont pas été édités dans ce commit. De plus, il conserve un historique des modifications, permettant de vérifier les changements accomplis et, si nécessaire, de retourner à une version précédente du logiciel.
 
 # Analyse de l'interface de LibreCast
 ## Glisser-déposer (aka Drag and Drop)
@@ -52,7 +52,7 @@ Chaque format de vidéo a des avantages et des inconvénients. Le format mp4, é
 ## Multi-threading
 Un dernier « défi technique » que nous avons rencontré est de permettre à l’utilisateur de charger une vidéo et de la visionner, tout en faisant autre chose dans le logiciel (comme télécharger une nouvelle vidéo par exemple). Mais, par défaut, l’ordinateur « lit » les lignes une par une, et les accomplies en attendant qu’elles aient fini avant de passer à la suivante. Ainsi, si l’utilisateur regarde une vidéo, il ne peut pas déplacer la fenêtre !
 Pour cela, nous avons utilisé le « mutli-threading ». Pour l’expliquer, je vais l’illuster avec un exemple :
-> Imaginons un pont, avec trois voitures voulant traverser, mais le pont ne supporte que le poids d’une voiture à la fois. Ce serait l’exemple précédent : chaque voiture doit attendre que la précédent ait traversé.
+> Imaginons un pont, avec trois voitures voulant traverser, mais le pont ne supporte que le poids d’une voiture à la fois. Ce serait l’exemple précédent : chaque voiture doit attendre que la précédente ait traversé.
 > Avec le multi-threading, c’est comme si l’on créé un deuxième pont, avec les même restrictions. Les voitures sur le premier pont peuvent circuler sans que celles sur le deuxième ne les en empêchent.
 
 Ainsi, la lecture de la vidéo se fait sur une « thread » séparée, afin que celle principale (qui gère l’interface utilisateur) ne soit pas bloquée.
@@ -63,19 +63,19 @@ Ainsi, la lecture de la vidéo se fait sur une « thread » séparée, afin que 
 
 * Comprendre LibreCast.
 
-* Organisation du travail
+* Organisation du travail **(Done)**
   * UI (vidéo + DnD)
   * Création de modules
   * Liens base de donnée
   * GitHub
 
-* Vidéo
+* Vidéo **(Done)**
   * Gestion du backend
   * codec vidéos
   * Lecteur vidéo
   * Multi-threading
 
-* Analyse de l'UI de LibreCast
+* Analyse de l'UI de LibreCast **(~ Done)**
   * Réflexion sur l'UI du player
   * Fenêtre plus complexe
   * Rendre l'UI intelligente <del>(test de nouvelles URL)</del>

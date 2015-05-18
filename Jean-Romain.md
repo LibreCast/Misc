@@ -1,4 +1,3 @@
-
 # Organisation du travail
 ## Interface utilisateur
 L’interface utilisateur est une partie extrêmement importante d’un logiciel, dans la mesure où c’est le seul moyen de communication avec l’utilisateur. Il faut permettre à ce dernier d’utiliser toutes les fonctionnalités d’un logiciel, en conservant une interface intuitive.
@@ -31,6 +30,31 @@ Mais l’interface de LibreCast ne serait pas complète sans un moyen de visionn
 Lancer la vidéo a demandé une réflexion technique, évoqué plus tard, mais également sur l’aspect de l’interface. Si un lecteur de vidéo peut sembler banal, il a tout de même fallu penser aux fonctionnalités nécessaires : réglage du son, de la taille de la fenêtre…
 Pour cela, je me suis notamment inspiré de l’apparence de VLC (quant aux fonctionnalités nécessaires), et ai opté pour une interface relativement sombre, souvent préférable lors du visionnage de vidéos (voir Annexe 3).
 On retrouve donc des boutons « play » et « pause », une fonctionnalité « plein écran », le temps écoulé et le temps restant de vidéo, mais également une barre montrant l’avancement de manière graphique, et permettant de se déplacer dans la vidéo. Enfin, une dernière barre (située derrière la précédente) montre l’avancement du téléchargement de la vidéo.
+
+## Lier interface et données
+LibreCast permet la création de listes de lectures (Playlists) et de gérer des abonnements. Il faut donc une base de données contenant ces informations, comme expliqué précédemment. J’ai donc utilisé des fonctions créées par Jean, et l’interface de Marion pour créer une application vraiment propre à l’utilisateur. Ainsi, ses playlists et abonnements sont sauvegardées et affichés à l’écran, de même pour les vidéos.
+Cette expérience m’a permis de regrouper deux technologies différentes, ce que je n’avais pas eu l’occasion de faire précédemment. De plus, j’ai pu comprendre les difficultés techniques qui peuvent exister, comme notamment utiliser une base de donnée correspondant aux demandes spécifiques de l’interface.
+
+# Gestion de la vidéo
+
+## Back-end
+Pour lire les vidéos, il a fallu créer une interface comme je l’ai expliqué précédemment. Mais pour lire la vidéo elle-même, il existe un système de « back-end ».
+En effet, dans les logiciels, il existe plusieurs « couches » :
+* Ce qui est visible par l’utilisateur, nommé le « front-end ». Pour simplifier, c’est toute l’interface utilisateur.
+* Ce que l’utilisateur ne voit pas, mais qui créé toutes les fonctionnalités.
+Pour la vidéo, il y a donc un back-end qui s’occupe de récupérer le fichier, et de « traduire » toutes les données afin de les afficher à l’écran. Il existe un bac-end différent pour chaque plateforme : par exemple, sur Windows, LibreCast ferait appel à Windows media player.
+
+## Codec vidéo
+Un des problèmes qui existe avec les vidéos est la variété de formats existants. Un « codec » est le raccourcit de « Coder, decoder », c’est à dire un logiciel qui permet d’encoder les vidéos dans un certain format (par exemple .mp4), ou de décoder ce format pour l’afficher à l’écran. Dans notre cas, c’est le bac-end qui s’en occupe.
+Chaque format de vidéo a des avantages et des inconvénients. Le format mp4, évoqué ci-dessus, est souvent utilisé car il est universel : un fichier encodé dans le format mp4 pourra être visionné sur n’importe quel plateforme. D’autres formats comme avi, qui possède une grande qualité d’image, ou WMW, qui dépend moins des codecs que le format avi.
+
+## Multi-threading
+Un dernier « défi technique » que nous avons rencontré est de permettre à l’utilisateur de charger une vidéo et de la visionner, tout en faisant autre chose dans le logiciel (comme télécharger une nouvelle vidéo par exemple). Mais, par défaut, l’ordinateur « lit » les lignes une par une, et les accomplies en attendant qu’elles aient fini avant de passer à la suivante. Ainsi, si l’utilisateur regarde une vidéo, il ne peut pas déplacer la fenêtre !
+Pour cela, nous avons utilisé le « mutli-threading ». Pour l’expliquer, je vais l’illuster avec un exemple :
+> Imaginons un pont, avec trois voitures voulant traverser, mais le pont ne supporte que le poids d’une voiture à la fois. Ce serait l’exemple précédent : chaque voiture doit attendre que la précédent ait traversé.
+> Avec le multi-threading, c’est comme si l’on créé un deuxième pont, avec les même restrictions. Les voitures sur le premier pont peuvent circuler sans que celles sur le deuxième ne les en empêchent.
+
+Ainsi, la lecture de la vidéo se fait sur une « thread » séparée, afin que celle principale (qui gère l’interface utilisateur) ne soit pas bloquée.
 
 
 # Plan

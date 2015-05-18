@@ -53,12 +53,13 @@ On retrouve donc des boutons « play » et « pause », une fonctionnalité « p
 * Analyse de l'UI de LibreCast
   * Réflexion sur l'UI du player
   * Fenêtre plus complexe
-  * Rendre l'UI intelligente (test de nouvelles URL)
+  * Rendre l'UI intelligente <del>(test de nouvelles URL)</del>
   * Liens entre interface et données
   * Gestion des Playlists
 
 * Penser au delà de LibreCast
   * Intégration avec d'autres plate-formes de diffusion de vidéo
+  * Utiliser un back-end perso ou VLC
   * Cryptographie : signer des vidéos pour en prouver sa paternité, pour les partager uniquement avec ceux qui y sont autorisés (rapide)
   * Application iOS
 

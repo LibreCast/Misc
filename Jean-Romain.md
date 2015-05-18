@@ -42,6 +42,7 @@ Pour lire les vidéos, il a fallu créer une interface comme je l’ai expliqué
 En effet, dans les logiciels, il existe plusieurs « couches » :
 * Ce qui est visible par l’utilisateur, nommé le « front-end ». Pour simplifier, c’est toute l’interface utilisateur.
 * Ce que l’utilisateur ne voit pas, mais qui créé toutes les fonctionnalités.
+
 Pour la vidéo, il y a donc un back-end qui s’occupe de récupérer le fichier, et de « traduire » toutes les données afin de les afficher à l’écran. Il existe un bac-end différent pour chaque plateforme : par exemple, sur Windows, LibreCast ferait appel à Windows media player.
 
 ## Codec vidéo

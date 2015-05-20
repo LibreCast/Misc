@@ -7,6 +7,7 @@ Dans la création de l’interface, mon rôle a été de mettre en relation l’
 
 ## Modules
 Afin de structurer LibreCast, j’ai découpé notre code en plusieurs fichiers, et ensuite créé des modules. Un module est un ensemble de code, qui peut-être utilisé depuis un autre fichier. Cela permet d’utiliser plusieurs fois les mêmes fonctionnalités, sans dupliquer du code, mais également de structurer le projet et rendre son fonctionnement plus clair.
+
 Pour LibreCast, j’ai créé 2 modules regroupant du code des mes partenaires et moi-même :
 * Le manageur de requêtes, qui s’occupe de récupérer des informations d’internet
 * Le manageur de l’interface, qui contient le code pour chaque fenêtre, ainsi que les images utilisées.
@@ -28,11 +29,13 @@ Pour permettre à l’utilisateur d’ajouter une vidéo dans une liste de lectu
 ## Lecteur de vidéo
 Mais l’interface de LibreCast ne serait pas complète sans un moyen de visionner des vidéos. Encore une fois, nous avons pensé à la solution la plus simple : double-cliquer sur une vidéo permet la regarder en lançant le lecteur.
 Lancer la vidéo a demandé une réflexion technique, évoqué plus tard, mais également sur l’aspect de l’interface. Si un lecteur de vidéo peut sembler banal, il a tout de même fallu penser aux fonctionnalités nécessaires : réglage du son, de la taille de la fenêtre…
+
 Pour cela, je me suis notamment inspiré de l’apparence de VLC (quant aux fonctionnalités nécessaires), et ai opté pour une interface relativement sombre, souvent préférable lors du visionnage de vidéos (voir Annexe 3).
 On retrouve donc des boutons « play » et « pause », une fonctionnalité « plein écran », le temps écoulé et le temps restant de vidéo, mais également une barre montrant l’avancement de manière graphique, et permettant de se déplacer dans la vidéo. Enfin, une dernière barre (située derrière la précédente) montre l’avancement du téléchargement de la vidéo.
 
 ## Lier interface et données
 LibreCast permet la création de listes de lectures (Playlists) et de gérer des abonnements. Il faut donc une base de données contenant ces informations, comme expliqué précédemment. J’ai donc utilisé des fonctions créées par Jean, et l’interface de Marion pour créer une application vraiment propre à l’utilisateur. Ainsi, ses playlists et abonnements sont sauvegardées et affichés à l’écran, de même pour les vidéos.
+
 Cette expérience m’a permis de regrouper deux technologies différentes, ce que je n’avais pas eu l’occasion de faire précédemment. De plus, j’ai pu comprendre les difficultés techniques qui peuvent exister, comme notamment utiliser une base de donnée correspondant aux demandes spécifiques de l’interface.
 
 # Gestion de la vidéo
@@ -47,10 +50,12 @@ Pour la vidéo, il y a donc un back-end qui s’occupe de récupérer le fichier
 
 ## Codec vidéo
 Un des problèmes qui existe avec les vidéos est la variété de formats existants. Un « codec » est le raccourcit de « Coder, decoder », c’est à dire un logiciel qui permet d’encoder les vidéos dans un certain format (par exemple .mp4), ou de décoder ce format pour l’afficher à l’écran. Dans notre cas, c’est le bac-end qui s’en occupe.
+
 Chaque format de vidéo a des avantages et des inconvénients. Le format mp4, évoqué ci-dessus, est souvent utilisé car il est universel : un fichier encodé dans le format mp4 pourra être visionné sur n’importe quel plateforme. D’autres formats comme avi, qui possède une grande qualité d’image, ou WMW, qui dépend moins des codecs que le format avi.
 
 ## Multi-threading
 Un dernier « défi technique » que nous avons rencontré est de permettre à l’utilisateur de charger une vidéo et de la visionner, tout en faisant autre chose dans le logiciel (comme télécharger une nouvelle vidéo par exemple). Mais, par défaut, l’ordinateur « lit » les lignes une par une, et les accomplies en attendant qu’elles aient fini avant de passer à la suivante. Ainsi, si l’utilisateur regarde une vidéo, il ne peut pas déplacer la fenêtre !
+
 Pour cela, nous avons utilisé le « mutli-threading ». Pour l’expliquer, je vais l’illuster avec un exemple :
 > Imaginons un pont, avec trois voitures voulant traverser, mais le pont ne supporte que le poids d’une voiture à la fois. Ce serait l’exemple précédent : chaque voiture doit attendre que la précédente ait traversé.
 > Avec le multi-threading, c’est comme si l’on créé un deuxième pont, avec les même restrictions. Les voitures sur le premier pont peuvent circuler sans que celles sur le deuxième ne les en empêchent.
@@ -61,12 +66,14 @@ Ainsi, la lecture de la vidéo se fait sur une « thread » séparée, afin que 
 
 ## Intégration d’autres plateformes
 Un inconvénient avec la méthode de diffusion de LibreCast pour les créateurs de contenu est le transfert de leurs vidéos depuis une autre plateforme (comme YouTube). Pour cela, il serait possible de créer un outil de migration, qui gèrerait le transfert du contenu vers la nouvelle « chaîne » de l’utilisateur.
+
 Il serait également imaginable de permettre aux utilisateurs d’utiliser YouTube comme serveur pour leurs vidéos, et simplement donner un lien YouTube dans LibreCast. Il faudrait alors « convertir » le lien YouTube en un lien directement vers le contenu. En effet, lorsqu’on visionne une vidéo sur YouTube, le lien utilisé n’est pas celui du fichier vidéo (en .mp4 par exemple), il est donc nécessaire de récupérer la véritable adresse du fichier.
 
 ## Modification du back-end
 L’utilisation du back-end « par défaut » pose certains problèmes :
 • Ce dernier dépend de la plateforme, il n’y a donc pas unicité des formats de vidéo compatibles
 • Ils peuvent avoir des problème, comme sur Mac OS où la taille de la vidéo n’est pas conservée lorsque la fenêtre est redimensionnée. Ainsi, une vidéo avec un format de 1280 pixels par 720 pixels peut-être redimensionner, et mesure 780 pixels par 720 pixels, étirant ainsi le contenu.
+
 Ainsi, il serait possible de chercher à créer un back-end personnalisé, ou d’utiliser celui de VLC, compatible avec de nombreux fichiers et qui accepte l’affichage de sous-titres.
 
 ## Cryptographie

@@ -57,6 +57,34 @@ Pour cela, nous avons utilisé le « mutli-threading ». Pour l’expliquer, je 
 
 Ainsi, la lecture de la vidéo se fait sur une « thread » séparée, afin que celle principale (qui gère l’interface utilisateur) ne soit pas bloquée.
 
+# Penser au-delà de LibreCast
+
+## Intégration d’autres plateformes
+Un inconvénient avec la méthode de diffusion de LibreCast pour les créateurs de contenu est le transfert de leurs vidéos depuis une autre plateforme (comme YouTube). Pour cela, il serait possible de créer un outil de migration, qui gèrerait le transfert du contenu vers la nouvelle « chaîne » de l’utilisateur.
+Il serait également imaginable de permettre aux utilisateurs d’utiliser YouTube comme serveur pour leurs vidéos, et simplement donner un lien YouTube dans LibreCast. Il faudrait alors « convertir » le lien YouTube en un lien directement vers le contenu. En effet, lorsqu’on visionne une vidéo sur YouTube, le lien utilisé n’est pas celui du fichier vidéo (en .mp4 par exemple), il est donc nécessaire de récupérer la véritable adresse du fichier.
+
+## Modification du back-end
+L’utilisation du back-end « par défaut » pose certains problèmes :
+• Ce dernier dépend de la plateforme, il n’y a donc pas unicité des formats de vidéo compatibles
+• Ils peuvent avoir des problème, comme sur Mac OS où la taille de la vidéo n’est pas conservée lorsque la fenêtre est redimensionnée. Ainsi, une vidéo avec un format de 1280 pixels par 720 pixels peut-être redimensionner, et mesure 780 pixels par 720 pixels, étirant ainsi le contenu.
+Ainsi, il serait possible de chercher à créer un back-end personnalisé, ou d’utiliser celui de VLC, compatible avec de nombreux fichiers et qui accepte l’affichage de sous-titres.
+
+## Cryptographie
+Une amélioration possible est la possibilité pour les utilisateurs de partager du contenu seulement avec leurs amis, ou les personnes autorisées. De plus, il serait utile de pouvoir « signer » une vidéo, c’est-à-dire prouver sa paternité (qui l’a mise en ligne). Pour cela, l’utilisation de cryptographie serait nécessaire, un partenariat avec le groupe de Colin Davalot, Alexis Daley (et qui d’autre ?) pourrait donc s’avérer utile.
+
+## Nouvelles plateformes
+Si LibreCast est disponible sur la grande majorité des ordinateurs, un autre marché existant est celui du mobile. Nous pourrions envisager de créer une version pour Android et iOS par exemple, afin de pouvoir visionner et télécharger des vidéos depuis n’importe où.
+
+# Annexes
+
+**Photos**
+
+## Webographie
+* Documentation de wxPython  http://wxpython.org/Phoenix/docs/html/main.html
+* Le site de GitHub  https://github.com
+* Notre projet sur GitHub  https://github.com/LibreCast
+* Page sur les back-ends de Wikipédia  http://fr.wikipedia.org/wiki/Backend
+
 
 # Plan
 * Introduction

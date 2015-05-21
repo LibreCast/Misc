@@ -67,9 +67,13 @@ LibreCast communique avec aria2 grâce au protocole "XML-RPC" qui nous permet d'
 
 ### Un système d'abonnement
 
-* Pour savoir les vidéos qu'un utilisateur met à disposition, il crée un fichier index. Quand on ajoute un abonnement sur LibreCast, c'est cet index qui est lu pour afficher la liste des vidéos disponible
-* Index écrit en XML
-* Un langage qu'il faut parser à l'aide d'un parseur : lxml
+Quand on ajoute un abonnement à LibreCast, il va aller télécharger une liste des vidéos présentes sur le serveur : le flux, qui sera mis à jour au fur et à mesure des nouveles vidéos. Ce flux permet aussi de stocker des méta-données sur l'abonnement : le nom de la chaine, l'icône, etc.
+
+Notre flux est écrit dans le format XML, et est retro-compatible avec les podcast (afin d'éviter tout isolement inutile avec des technologies similaires). Pendant le développement de LibreCast, nous avons écrit ces flux "à la main" à l'aide d'un éditeur de texte. Un exemple de flux contenant deux vidéos est disponible en annexe 1.
+
+Pour extraire des informations de ce fichier XML, nous devons le **parser** sous forme d'un arbre. Ecrire un parseur XML étant une tâche très complexe (usage important des expressions régulières, un grand nombre de fonctions récursives, etc.) pour nos contraintes de temps, j'ai préféré recourir à une librairie existante et qui a fait ses preuves : lxml.
+
+Une fois le fichier chargé par lxml, je peux parcourir l'arbre parsé et récupérer les informations de la chaîne ainsi que toutes les vidéos du flux.
 
 ### Une base de donnée pour stocker des données internes
 
@@ -87,9 +91,12 @@ SELECT * FROM videos;
 
 # Conclusion
 
-LibreCast est une tentative de solution au problème de l'expression sur internet, en résolvant le problème de la centralisation sur les solutions existantes de partage de vidéos.
+LibreCast est notre tentative de solution au problème du partage de vidéos en ligne. Cette solution décentralisée peut être envisagée dans certains usages pour remplacer une plate-forme de partage de vidéos comme YouTube ou DailyMotion, en décentralisant le stockage des vidéos. Elle peut même convenir pour des vidéos à forte audience grâce au Peer-2-Peer, qui rend le fort nombre de visionneur une force pour la propagation de la vidéo.
 
-LibreCast n'est cependant pas une finalité, nous pouvons y voir encore quelques idées pour pousser le concept encore plus loin. Nous pourrions en effet penser à implémenter la solution de cryptographie développée par nos confrères en ISN, afin de pouvoir limiter la diffusion d'une vidéo seulement aux personnes qui disposent de la clé de décryptage, ou encore à faire un annuaire de flux, pour créer une dimension sociale autour de LibreCast, permettant à un utilisateur lambda de découvrir des vidéos d'un auteur qu'il ne connait pas. 
+LibreCast n'est cependant pas une finalité, nous pouvons aller beaucoup plus loin, par exemple :
+
+* Pour permettre une diffusion très restrictive et sécurisée des vidéos, nous pourrions intégrer le travail sur la cryptographie effectué par Colin, Elouen et Alexis. Seul les utilisateurs équipés de la clé de déchiffrement pourront accéder au contenu.
+* On pourrait aussi penser à créer un aspect social pour se rapprocher au plus des sites de partage à la mode, avec un annuaire de flux afin de pouvoir découvrir de nouveaux auteurs ou encore une fonctionnalité de commentaire. Cependant, ce genre de fonctions étant forcément centralisées, les serveurs assurant ces fonctionnalités doivent être au choix de l'utilisateur, afin d'éviter la création d'un gros point central.
 
 # Bibliographie
 

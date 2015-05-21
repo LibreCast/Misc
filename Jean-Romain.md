@@ -14,6 +14,7 @@ LibreCast essaye de palier à ces problèmes, en laissant les créateurs de cont
 ## Aspect plus technique
 Un autre aspect novateur de LibreCast est l’intégration directe du « peer-to-peer » en tant que mode de téléchargement. Cette technologie permet à un utilisateur de télécharger des données depuis d’autres utilisateurs, n’importe où dans le monde, plutôt que directement depuis un serveur.
 > Par exemple, imaginons que je souhaite télécharger une vidéo, et que Jean et Marion en ont chacun téléchargé une partie. Ils me transmettraient alors le contenu qu’ils ont obtenu, tandis que de mon côté je leur transmettrais du nouveau contenu qu’ils n’ont pas encore pu télécharger.
+
 Ainsi, la pluralité des sources permet un téléchargement plus rapide, et parfois plus anonyme.
 
 # Organisation du travail
@@ -108,8 +109,11 @@ Pour Conclure, LibreCast est une solution qui tente de s’adapter aux besoins d
 # Annexes
 
 **Annexe 1 : Répartition du travail**
+
 **Annexe 2 : Découpage de la fenêtre principale de LibreCast**
+
 **Annexe 3 : Exemple de glisser-déposer**
+
 **Annexe 4 : Lecteur de vidéos**
 
 ## Webographie

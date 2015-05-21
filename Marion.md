@@ -78,7 +78,7 @@ Avec wxpython, les fenêtres sont découpées en _widgets_, c'est à dire des é
 
 Par exemple, la fenêtre principale de LibreCast est composée d'un _Frame_ ou cadre, lui même divisé en deux parties : un _TreeCtrl_ ou arbre et une _ListCtrl_ ou liste des vidéos. Puis l'arbre est aussi redécoupé etc... 
 
-Les commentaires sont très importants dans cette partie du code car permettent de ne pas s'y perdre ! (voir Annexe)
+Les commentaires sont très importants dans cette partie du code car permettent de ne pas s'y perdre ! (voir le code en Annexe 1)
 
 ## Rendre l'interface intelligente
 
@@ -96,7 +96,7 @@ Une expression régulière ou plus connue sous l'abréviation de Regex est mani�
 
 Nous utilisons les regex à plusieurs occasions dans LibreCast ; nous en utilisons entre autre pour vérifier la validité de l'adresse d'un flux. Nous devons alors vérifier que cette adresse commence par "http://" ou "https://", suivi de quelques caractères alphanumériques, mais nous devons aussi proscrire la présence de certains caractères spéciaux.
 
-Pour transcrire cette règle dans notre programme, nous écrivons une règle dans le langage regex. (Voir Annexe)
+Pour transcrire cette règle dans notre programme, nous écrivons une règle dans le langage regex. (Voir le code en Annexe 2)
 
 La difficulté réside dans le choix de notre regex. Elle ne doit pas être trop rigoureuse au risque de refuser trop d'URLs, mais doit contrôler assez pour empêcher trop d'erreurs.
 

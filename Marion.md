@@ -3,7 +3,7 @@ _Marion Ser_
 Communiquer, s'exprimer, partager simplement et librement, c'est ce à quoi nous, en tant qu'internautes, aspirons de plus en plus. Et si de nombreuses plates-formes proposent de répondre à cette demande, elles présentent pourtant souvent des inconvénients notables. C'est dans l'optique de créer un moyen de partage de vidéos qui corresponde à nos attentes que nous avons créé LibreCast.
 
 # Comprendre LibreCast
-_LibreCast_ ? C'est l'association de Libre (c'est un logiciel libre, le projet est open source _compléter !!!!_) et de Cast c'est à dire Diffusion (le principe même du logiciel est le partage).
+_LibreCast_ ? C'est l'association de Libre (le code source est libre) et de Cast c'est à dire Diffusion (le principe même du logiciel est le partage).
 
 ## Pourquoi LibreCast ?
 
@@ -24,7 +24,7 @@ Par exemple, je souhaite optenir une vidéo sur LibreCast que Jean et Jean-Romai
 # Organisation du travail
 
 ## Collaboration et Répartition
-Le très connu site GitHub a hébergé notre projet et nous a permis de travailler en collaboration. En effet, toutes nos lignes de code sont mises en commun et disponibles depuis tous les ordinateurs ayant accès à Internet.
+Le très connu site GitHub a hébergé notre projet et nous a permis de travailler en collaboration. En effet, toutes nos lignes de code sont mises en commun et disponibles sur le web. Nous pouvons également grâce à GitHub retrouver les versions précédentes de notre projet et se rendre compte de son évolution.
 
 Nous avons rapidement décidé de se départager le travail afin d'être plus efficaces. Jean a créé une base de donnée, qui sauvegarde et organise toutes les informations spécifiques à un utilisateur. Jean-Romain a lié les différentes parties de l’interface utilisateur (que Jean-Romain et moi-même avons programmée) avec cette base de donnée.
 
@@ -33,7 +33,7 @@ Par exemple, la création d'une nouvelle playlist requiert tous ces domaines : l
 ## Brainstorming et réflexions
 Notre projet s'est construit petit à petit, partant d'une idée qui s'est préçisée au fil de nos discussions. Nous avons, avant même de penser à sa programmation, passé beaucoup de temps à réfléchir à l'architecture de LibreCast.
 
-Il a ensuite fallu rendre possible une idée jusqu'ici théorique, pouvoir la concrétiser.
+Nous avons passé les premières semaines à penser et faire ressortir nos objectifs par rapport à ce projet. Il a ensuite fallu rendre possible une idée jusqu'ici théorique, pouvoir la concrétiser.
 
 # L'Interface Utilisateur 
 
@@ -86,24 +86,30 @@ Les commentaires sont très importants dans cette partie du code car permettent 
 
 Il était nécessaire de convertir des tailles de fichiers et des durées dans la fenêtre de téléchargement de LibreCast. En effet, il faut que ces données soient directement lisibles par l'utilisateur.
 
-Ainsi, 
+Par exemple, il nous semblerait absurde d'exprimer la distance Paris-Marseille en mètres, celle-ci nous étant bien plus compréhensible en kilomètres. De la même manière, il faut convertir des données en un format adapté pour la fenêtre de téléchargement de LibreCast.
+
+Ainsi,  on a réalisé un convertisseur qui transforme des octets en une forme adéquat (Kio, Gio, Mio...) et des durées en un format adapté (un grand nombre de secondes n'est pas lisible facilement). 
 
 ### Regular Expressions (Regex)
 
-Une regular expression ou Regex est une chaîne de caractères (motif) qui décrit une syntaxe particulière. Elle est utilisée dans le contrôle de texte.
+Une expression régulière ou plus connue sous l'abréviation de Regex est manière d'écrire le format d'une chaîne de caractères. Par exemple, elles sont fréquemment utilisée pour vérifier la validité d'une adresse mail ou d'un numéro de téléphone.
 
-Par exemple, lorsque l'on souhaite ajouter un flux dans LibreCast, il faut entrer une url. Le rôle de la regex est alors de vérifier que le texte entré correspond bien à la syntaxe d'une URL. (voir Annexe)
+Nous utilisons les regex à plusieurs occasions dans LibreCast ; nous en utilisons entre autre pour vérifier la validité de l'adresse d'un flux. Nous devons alors vérifier que cette adresse commence par "http://" ou "https://", suivi de quelques caractères alphanumériques, mais nous devons aussi proscrire la présence de certains caractères spéciaux.
 
-La difficulté réside dans le choix de notre regex. Elle ne doit pas être trop rigoureuse au risque de refuser trop d'URLs (par exemple des URLs du type www.raspberrypi.html, qui divergent de la syntaxe classique), mais doit contrôler assez pour empêcher trop d'erreurs.
+Pour transcrire cette règle dans notre programme, nous écrivons une règle dans le langage regex. (Voir Annexe)
+
+La difficulté réside dans le choix de notre regex. Elle ne doit pas être trop rigoureuse au risque de refuser trop d'URLs, mais doit contrôler assez pour empêcher trop d'erreurs.
 
 
 Le convertisseur et la regex contribuent à rendre l'Interface Utilisateur réactive et donc à la rendre intelligente.
 
 # Conclusion
 
+On pourrait imaginer des évolutions à ce projet, comme par exemple réfléchir à une adaptation financière avec une forme contrôlée de publicités ou encore la possibilité de partager d'autre types de médias (textes, pdf, audio, modèles 3D etc...).
+
 LibreCast est un projet en perpétuelle évolution, il ne s'arrêtera pas là où nous avons établi un premier objectif. Si nous avons construit sa structure, ce n'est que pour mieux l'enrichir par la suite. On peut penser au-delà du LibreCast d'aujourd'hui...
 
-Ce projet m'a énormément apporté en connaissances et savoir-faire personnels, me faisant porter un nouveau regard sur la programmation. 
+Ce projet m'a énormément apporté en connaissances et savoir-faire personnels, me faisant porter un nouveau regard sur la programmation. Travailler avec des personnes déjà expérimentées en programmation n'est pas toujours facile, mais Jean et Jean-Romain ont particulièrement été compréhensifs et m'ont tirée vers le haut. C'est grâce à ce projet ambitieux et les compétences qu'il requiert que j'ai pu progresser.
 
 # Bibliographie
 
@@ -122,42 +128,3 @@ La page officielle de wxPython, répertoriant les nombreux widgets:
 Conseillé par Jean-Romain, ce tutoriel m'a permis de comprendre les Regex:
 
 *https://docs.python.org/2/howto/regex.html*
-
-
-- [ ]  Comprendre LibreCast
-Pourquoi la nécessité de LIbreCast ? (ce que ça apporte de plus que les autres plate-formes de partage de vidéos)
-Ses principes (droits d'auteurs et liberté etc...)
-Comment ça marche concrètement ?
-
-- [ ] Organisation du travail + cahier des charges (ensemble de ce qu'il fallait réaliser // nos compétences)
-  * UI + liens entre les modules
-  * GitHub = permet une meilleure collaboration, adaptée au partage de code
-
-- [ ] Création de l'UI
-  * Réflexion sur l'accessibilité (photos de Jean)
-  * Les contraintes d'une UI compréhensible
-  => exemple des téléphones avant tactile, puis après
-
-- [ ] WxPython is love, WxPython is life
-  * Découpage en widgets
-  * Photo de découpages
-  
-- [ ] Analyse de l'UI de LibreCast
-  * Découpage de la fenêtre
-  * Pourquoi cette partie est là + utilité
-  * Rendre l'UI intelligente (regex)
-
-- [ ] Penser au delà de LibreCast = perspectives
-  * Financièrement (serveurs + Google ads)
-  * D'autres types de médias : textes, PDF, audio, modèles 3D, etc.
-
-- [ ] Conclusion
-  * LibreCast se veut être une tentative pour penser autrement que les autres plateformes.
-  * Plus les problèmes de droits d'auteurs
-  * Utilisation de technologies à la mode, en ajoutant des fonctionnalités
-  * Projet qui peut encore évoluer
-
-- [ ] Annexes
- * Code d'une fenêtre simplifiée
- * Photo de la fenêtre avec explication
- * Même photo mais découpage des widgets et sizers
